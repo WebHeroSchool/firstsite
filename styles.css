@@ -1,3 +1,40 @@
 .title {
   font-family: PT Serif;
 }
+body {
+  margin: 0;
+  /* border: dashed 1px red; */
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo,
+.menu {
+  border: dashed 1px red;
+}
+
+.logo {
+  padding: 40px 0;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  padding: 0 13px;
+  border: dashed 1px red;
+}
+
+.menu__item:last-child {
+  padding-right: 0;
+}
