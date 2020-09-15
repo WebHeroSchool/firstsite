@@ -1,9 +1,9 @@
 .title {
   font-family: PT Serif;
 }
+
 body {
   margin: 0;
-  /* border: dashed 1px red; */
 }
 
 .wrapper {
@@ -14,11 +14,6 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-}
-
-.logo,
-.menu {
-  border: dashed 1px red;
 }
 
 .logo {
@@ -32,7 +27,6 @@ body {
 
 .menu__item {
   padding: 0 13px;
-  border: dashed 1px red;
 }
 
 .menu__item:last-child {
