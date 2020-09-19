@@ -14,6 +14,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 100px;
 }
 
 .logo {
@@ -102,4 +103,38 @@ body {
 
 .logo__circle_color_dark-blue {
   background: #0056ec;
+}
+
+.main {
+  padding: 0 63% 100px 0;
+  background: top right no-repeat url(img/mainimg.svg);
+}
+
+.main__title {
+  margin: 0 0 40px 0;
+  font: 700 50px/65px "PT Serif", Arial, Helvetica, sans-serif;
+}
+
+.main__title-text__highlight {
+  background: #ecf3ff;
+}
+
+.main__description {
+  margin: 0 0 41px 0;
+  font: 400 22px/26px Roboto, Arial, Helvetica, sans-serif;
+}
+
+.main__button {
+  display: inline-block;
+  font: 500 18px/21px Roboto, Arial, Helvetica, sans-serif;
+  padding: 14px 16px;
+  background: #0056ec;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: opacity 0.5s;
+}
+
+.main__button:hover {
+  opacity: 0.5;
 }
