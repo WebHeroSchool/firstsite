@@ -170,9 +170,13 @@ body {
   .main__button {
     padding: 19px 30px;
   }
+
+  #menu__toggle {
+    display: none;
+  }
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1440px) {
   .wrapper {
     width: 68%;
     margin: auto;
@@ -180,6 +184,10 @@ body {
 
   .header {
     margin-bottom: 84px;
+  }
+
+  .logo {
+    margin: 0 0 2px 0;
   }
 
   .menu {
@@ -247,10 +255,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .menu__item {
-    display: none;
-  }
-
   .header {
     margin-bottom: 8px;
   }
@@ -258,13 +262,14 @@ body {
   .main {
     background-size: 85%;
     background-position: top center;
-    padding: 80% 0 0;
+    padding: 79% 0 0;
     text-align: center;
   }
 
   .main__title {
     font: bold 30px/39px "PT Serif", Arial, Helvetica, sans-serif;
-    margin-bottom: 32px;
+    margin-bottom: 35px;
+    margin-left: 6px;
   }
 
   .main__description {
@@ -283,33 +288,86 @@ body {
     display: none;
   }
 
-  .menu {
+  .menu__btn {
+    display: flex;
+    align-items: center;
     width: 25px;
     height: 3px;
     background: #0056ec;
-    margin: 39px 0 0;
+    margin: 23px 0 0;
     position: relative;
+    cursor: pointer;
+    transition-duration: 0.25s;
   }
 
-  .menu::before,
-  .menu::after {
+  .menu__btn::before,
+  .menu__btn::after {
     content: "";
     position: absolute;
     width: 25px;
     height: 3px;
     background: #0056ec;
+    transition-duration: 0.25s;
   }
 
-  .menu::before {
+  .menu__btn::before {
     bottom: 7px;
   }
 
-  .menu::after {
+  .menu__btn::after {
     top: 7px;
   }
 
   .wrapper {
     width: 87%;
     margin: auto;
+  }
+
+  .menu-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    visibility: hidden;
+    /* top: 0; */
+    /* left: -100%; */
+    width: 100%;
+    height: 100%;
+    /* margin-top: 50px; */
+    background-color: #e5e5e5;
+    border: 1px dashed red;
+    transition-duration: 0.25s;
+  }
+
+  .menu__item {
+    font: 500 30px/35px Roboto, Arial, Helvetica, sans-serif;
+    margin-bottom: 24px;
+    border: 1px dashed blue;
+    transition-duration: 0.25s;
+  }
+
+  #menu__toggle {
+    display: block;
+    opacity: 0;
+  }
+
+  #menu__toggle:checked ~ .menu__btn {
+    transform: rotate(45deg);
+  }
+
+  #menu__toggle:checked ~ .menu__btn::before {
+    bottom: 0;
+    transform: rotate(0);
+  }
+
+  #menu__toggle:checked ~ .menu__btn::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
+  #menu__toggle:checked ~ .menu-box {
+    visibility: visible;
+    /* left: 0; */
   }
 }
