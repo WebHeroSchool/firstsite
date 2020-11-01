@@ -132,11 +132,26 @@ body {
   color: #fff;
   border-radius: 4px;
   text-decoration: none;
-  transition: opacity 0.5s;
 }
 
 .main__button:hover {
-  opacity: 0.5;
+  animation-name: button;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes button {
+  0% {
+    opacity: 100%;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 50%;
+    transform: scale(1.2);
+  }
 }
 
 @media (max-width: 1920px) {
