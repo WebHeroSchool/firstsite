@@ -365,8 +365,14 @@ body {
 
   .menu__item {
     font: 500 30px/35px Roboto, Arial, Helvetica, sans-serif;
-    margin: 0 0 29px 0;
     transition-duration: 0.5s;
+    bottom: 22px;
+    margin-left: 24px;
+    padding: 13px 0 12px 0;
+  }
+
+  .menu__item:last-child {
+    margin: 0 7px 0 0;
   }
 
   .menu__item_active::after {
