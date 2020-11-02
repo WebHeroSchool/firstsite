@@ -24,6 +24,11 @@ body {
   position: relative;
 }
 
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+}
+
 .menu {
   display: flex;
   align-items: center;
@@ -312,7 +317,8 @@ body {
     margin: 23px 0 0;
     position: relative;
     cursor: pointer;
-    transition-duration: 0.25s;
+    z-index: 1;
+    transition-duration: 0.5s;
   }
 
   .menu__btn::before,
@@ -322,7 +328,7 @@ body {
     width: 25px;
     height: 3px;
     background: #0056ec;
-    transition-duration: 0.25s;
+    transition-duration: 0.5s;
   }
 
   .menu__btn::before {
@@ -338,26 +344,39 @@ body {
     margin: auto;
   }
 
+  .hamburger-menu {
+    display: block;
+  }
+
   .menu-box {
     display: flex;
+    align-self: center;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     visibility: hidden;
-    left: -100%;
+    top: 0;
+    right: -100%;
     width: 100%;
     height: 100%;
-    background-color: #e5e5e5;
-    border: 1px dashed red;
-    transition-duration: 0.25s;
+    background-color: #fff;
+    transition-duration: 0.5s;
   }
 
   .menu__item {
     font: 500 30px/35px Roboto, Arial, Helvetica, sans-serif;
-    margin-bottom: 24px;
-    border: 1px dashed blue;
-    transition-duration: 0.25s;
+    transition-duration: 0.5s;
+    bottom: 22px;
+    margin-left: 24px;
+    padding: 13px 0 12px 0;
+  }
+
+  .menu__item:last-child {
+    margin: 0 7px 0 0;
+  }
+
+  .menu__item_active::after {
+    opacity: 0;
   }
 
   #menu__toggle {
@@ -381,6 +400,6 @@ body {
 
   #menu__toggle:checked ~ .menu-box {
     visibility: visible;
-    left: 0;
+    right: 0;
   }
 }
